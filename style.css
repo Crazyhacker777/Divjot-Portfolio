@@ -17,6 +17,11 @@ body {
     background: #f7f9fc;
     color: #172033;
     line-height: 1.6;
+    transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+
+position: relative;
 }
 
 
@@ -1251,4 +1256,1038 @@ a:focus-visible {
         padding: 25px;
     }
 
+}
+
+/* =========================
+   LIGHT / DARK THEME
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Theme Button */
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #dbe2ea;
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.35s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.12);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.15);
+}
+
+body.dark-mode .theme-toggle {
+    background: #1e293b;
+
+    border-color: #475569;
+}
+
+body.dark-mode .theme-toggle:hover {
+    box-shadow:
+        0 8px 30px rgba(96, 165, 250, 0.20);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+
+/* Main backgrounds */
+
+body.dark-mode .about-section,
+body.dark-mode .projects-section,
+body.dark-mode .contact-section {
+    background: #0f172a;
+
+    border-color: #1e293b;
+}
+
+body.dark-mode .skills-section,
+body.dark-mode .experience-section {
+    background: #111827;
+
+    border-color: #1e293b;
+}
+
+
+/* Headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #f8fafc;
+}
+
+
+/* Paragraphs */
+
+body.dark-mode p {
+    color: #94a3b8;
+}
+
+
+/* Cards */
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .education-card {
+    background: #1e293b;
+
+    border-color: #334155;
+}
+
+body.dark-mode .skill-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .experience-card:hover {
+    border-color: #60a5fa;
+}
+
+
+/* Featured project */
+
+body.dark-mode .featured-project {
+    background: #172554;
+
+    border-color: #1e3a8a;
+}
+
+
+/* Skill tags */
+
+body.dark-mode .skill-tags span,
+body.dark-mode .project-tech span,
+body.dark-mode .experience-tags span {
+    background: #0f172a;
+
+    border-color: #334155;
+
+    color: #cbd5e1;
+}
+
+
+/* Contact */
+
+body.dark-mode .contact-box {
+    background: #172554;
+
+    border-color: #1e3a8a;
+}
+
+
+/* Contact links */
+
+body.dark-mode .contact-links a {
+    color: #e2e8f0;
+
+    border-color: #334155;
+}
+
+
+/* Status */
+
+body.dark-mode .status {
+    background: #0f172a;
+
+    border-color: #334155;
+
+    color: #94a3b8;
+}
+
+
+/* Theme button */
+
+body.dark-mode .theme-toggle {
+    background: #1e293b;
+
+    border-color: #475569;
+
+    color: #f8fafc;
+}
+
+
+/* Footer */
+
+body.dark-mode .footer {
+    background: #020617;
+}
+
+
+/* =========================
+   DARK MODE NAV
+========================= */
+
+body.dark-mode nav a {
+    color: #cbd5e1;
+}
+
+body.dark-mode nav a:hover {
+    color: #60a5fa;
+}
+/* =========================
+   FOCUS MODE BACKGROUND
+========================= */
+
+
+
+body.dark-mode::before {
+    opacity: 1;
+}
+
+
+/* =========================
+   DARK MODE AMBIENT GLOW
+========================= */
+
+body.dark-mode {
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(37, 99, 235, 0.08),
+            transparent 28%
+        ),
+        #0f172a;
+}
+
+
+/* =========================
+   CARD TRANSITIONS
+========================= */
+
+.skill-card,
+.project-card,
+.experience-card,
+.education-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+.btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   NAVIGATION TRANSITION
+========================= */
+
+nav a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+
+
+
+@keyframes rainFall {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+
+}
+/* =========================================
+   PREMIUM INTERACTIVE THEME
+========================================= */
+
+body {
+    transition:
+        background 0.6s ease,
+        color 0.6s ease;
+}
+
+
+/* =========================================
+   LIGHT MODE BACKGROUND
+========================================= */
+
+body:not(.dark-mode) {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(59, 130, 246, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(139, 92, 246, 0.10),
+            transparent 30%
+        ),
+        #f8fafc;
+}
+
+
+/* =========================================
+   DARK FOCUS MODE
+========================================= */
+
+body.dark-mode {
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, 0.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(139, 92, 246, 0.13),
+            transparent 28%
+        ),
+        #020617;
+
+    color: #e2e8f0;
+}
+
+
+/* =========================================
+   ANIMATED AMBIENT LIGHT
+========================================= */
+
+body.dark-mode::before {
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    top: -180px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.20),
+            transparent 70%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: ambientMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes ambientMove {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(180px, 120px);
+    }
+
+}
+
+
+/* =========================================
+   GLASS CARDS
+========================================= */
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .education-card {
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(148, 163, 184, 0.15);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   INTERACTIVE CARDS
+========================================= */
+
+.skill-card,
+.project-card,
+.experience-card,
+.education-card {
+
+    transition:
+        transform 0.35s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.01);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .skill-card:hover,
+body.dark-mode .project-card:hover,
+body.dark-mode .experience-card:hover {
+
+    box-shadow:
+        0 20px 60px rgba(59, 130, 246, 0.12);
+
+    border-color:
+        rgba(96, 165, 250, 0.45);
+}
+
+
+/* =========================================
+   BUTTON ANIMATION
+========================================= */
+
+.btn {
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav a {
+
+    position: relative;
+
+    transition:
+        color 0.25s ease;
+}
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: currentColor;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.25s ease;
+}
+
+nav a:hover::after {
+
+    width: 70%;
+}
+
+
+/* =========================================
+   HERO ANIMATION
+========================================= */
+
+.hero-content {
+
+    animation:
+        heroEnter 0.9s ease both;
+}
+
+@keyframes heroEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   PHOTO INTERACTION
+========================================= */
+
+.profile-placeholder {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.profile-placeholder:hover {
+
+    transform:
+        scale(1.05)
+        rotate(2deg);
+
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-toggle {
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.8,.2,1),
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.theme-toggle:hover {
+
+    transform:
+        rotate(25deg)
+        scale(1.12);
+}
+
+body.dark-mode .theme-toggle {
+
+    box-shadow:
+        0 0 25px rgba(96, 165, 250, 0.20);
+}
+
+
+/* =========================================
+   DARK MODE TEXT
+========================================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+
+    color: #f8fafc;
+}
+
+body.dark-mode p {
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   DARK MODE SECTIONS
+========================================= */
+
+body.dark-mode .about-section,
+body.dark-mode .projects-section,
+body.dark-mode .contact-section {
+
+    background: transparent;
+}
+
+body.dark-mode .skills-section,
+body.dark-mode .experience-section {
+
+    background:
+        rgba(15, 23, 42, 0.25);
+}
+
+
+
+/* Keep website content above the rain */
+
+header,
+main,
+footer {
+    position: relative;
+    z-index: 2;
+}
+/* =========================================
+   MOUSE GLOW
+========================================= */
+
+body.dark-mode::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    left: var(--mouse-x, 50%);
+    top: var(--mouse-y, 50%);
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.10),
+            transparent 65%
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    transition:
+        left 0.15s ease,
+        top 0.15s ease;
+}
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.revealed {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+/* =========================================
+   SKILL BARS
+========================================= */
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e2e8f0;
+}
+
+.skill-progress {
+    width: 0;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    transition:
+        width 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+body.dark-mode .skill-bar {
+    background: #1e293b;
+}
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+nav a.active {
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+body.dark-mode nav a.active {
+    color: #60a5fa;
+}
+
+nav a.active::after {
+    width: 70%;
+}
+/* =========================================
+   TECH FOCUS BACKGROUND
+========================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated background glow */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    top: -180px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.15),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        floatingGlow 12s ease-in-out infinite alternate;
+}
+
+body.dark-mode::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(96, 165, 250, 0.20),
+            transparent 70%
+        );
+}
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-100px, 100px);
+    }
+
+    100% {
+        transform: translate(50px, 180px);
+    }
+
+}
+
+
+/* =========================================
+   SECOND FLOATING ORB
+========================================= */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    bottom: -150px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(139, 92, 246, 0.10),
+            transparent 70%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        floatingOrb 15s ease-in-out infinite alternate;
+}
+
+
+
+
+
+
+/* =========================================
+   SUBTLE TECH GRID — DARK MODE
+========================================= */
+
+body.dark-mode main {
+    background-image:
+        linear-gradient(
+            rgba(148, 163, 184, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+}
+
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .experience-card,
+body.dark-mode .education-card {
+
+    backdrop-filter: blur(14px);
+
+    background:
+        rgba(15, 23, 42, 0.68);
+}
+
+
+/* =========================================
+   PREMIUM CARD HOVER
+========================================= */
+
+.project-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.015);
+
+}
+
+.project-card {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #60a5fa,
+            transparent
+        );
+
+    transition:
+        left 0.6s ease;
+}
+
+.project-card:hover::before {
+
+    left: 100%;
+}
+
+
+/* =========================================
+   PROFILE PHOTO GLOW
+========================================= */
+
+body.dark-mode .profile-placeholder {
+
+    box-shadow:
+        0 0 0 1px rgba(96, 165, 250, 0.25),
+        0 0 35px rgba(59, 130, 246, 0.18);
+}
+
+.profile-placeholder:hover {
+
+    box-shadow:
+        0 15px 45px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   SECTION TRANSITIONS
+========================================= */
+
+section {
+
+    transition:
+        background 0.5s ease,
+        border-color 0.5s ease;
+}
+
+
+/* =========================================
+   REDUCE MOTION FOR ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* =========================================
+   PROFILE CARD — DARK MODE FIX
+========================================= */
+
+body.dark-mode .profile-card h3 {
+    color: #1e293b;
+}
+
+body.dark-mode .profile-card p {
+    color: #64748b;
 }
